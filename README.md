@@ -1,3 +1,3 @@
 # docker-multiposter
 
-/multiposter-boot.sh && exec cloe_run $MP_ACTION
+ENTRYPOINT /multiposter-boot.sh && exec cloe_run $MP_ACTION
