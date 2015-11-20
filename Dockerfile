@@ -34,4 +34,7 @@ ENV MAVEN_OPTS="-XX:+UseG1GC $MAVEN_OPTS"
 VOLUME /$M2_REPO
 
 
+# ENTRYPOINT
+
 ENTRYPOINT /multiposter-boot.sh && exec cloe_run $MP_ACTION
+
