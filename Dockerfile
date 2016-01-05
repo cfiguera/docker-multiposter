@@ -23,10 +23,7 @@ RUN ln -s /opt/jdk/bin/java /usr/bin/java
 # CONFIG
 
 ENV JAVA_HOME /opt/jdk
-ENV JAVA_OPTS $JAVA_OPTS
-
 ENV M2_REPO /root/.m2/repository
-ENV MAVEN_OPTS $MAVEN_OPTS
 
 
 # VOLUME
