@@ -10,6 +10,11 @@ RUN rm /etc/localtime && \
     ln -s /usr/share/zoneinfo/$TZ /etc/localtime
 
 
+# CURL
+
+RUN apt-get update -qq && apt-get upgrade -y && apt-get install -y curl
+
+
 # JAVA
 ENV JAVA_MINOR 72
 ENV JAVA_BASE 15
