@@ -21,17 +21,6 @@ RUN wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://down
     rm server-jre-8u$JAVA_MINOR-linux-x64.tar.gz
 
 
-# PHANTOMJS
-
-ENV PHANTOMJS_VERSION 2.1.1
-RUN apt-get update && apt-get install -y bzip2 psmisc && \
-    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
-    tar -jxf phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
-    mv phantomjs-$PHANTOMJS_VERSION-linux-x86_64 /opt/phantom && \
-    ln -s /opt/phantom/bin/phantomjs /usr/bin/phantomjs && \
-    rm phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2
-
-
 # CONFIG
 
 ENV JAVA_HOME /opt/jdk
