@@ -12,7 +12,7 @@ RUN rm /etc/localtime && \
 
 # CURL
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install -y curl
+RUN apt-get update && apt-get upgrade && apt-get install -y curl
 
 
 # JAVA
