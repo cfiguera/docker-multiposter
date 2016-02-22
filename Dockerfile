@@ -16,8 +16,8 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install -y curl
 
 
 # JAVA
-ENV JAVA_MINOR 72
-ENV JAVA_BASE 15
+ENV JAVA_MINOR 74
+ENV JAVA_BASE 02
 RUN wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u$JAVA_MINOR-b$JAVA_BASE/server-jre-8u$JAVA_MINOR-linux-x64.tar.gz && \
     tar -zxf server-jre-8u$JAVA_MINOR-linux-x64.tar.gz -C /opt && \
     mv /opt/jdk1.8.0_$JAVA_MINOR /opt/jdk && \
