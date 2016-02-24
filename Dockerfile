@@ -42,6 +42,13 @@ VOLUME /cloe
 VOLUME /$M2_REPO
 
 
+# CLEANUP
+
+RUN apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+
 # ENTRYPOINT
 
 ENTRYPOINT /multiposter-boot.sh && exec cloe_run $MP_ACTION
